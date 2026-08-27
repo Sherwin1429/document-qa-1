@@ -87,7 +87,7 @@ else:
         elif file_extension == 'pdf':
             document = read_pdf(uploaded_file)
 
-        # Reject any unsupported file type.
+        # Reject unsupported file types.
         else:
             st.error("Unsupported file type.")
             st.stop()
@@ -105,9 +105,15 @@ else:
         ]
 
 
+        # Select the model being tested.
+        model_name = "gpt-5-nano"
+        # Show which model is being used.
+        st.info(f"Model being tested: {model_name}")
+
+
         # Generate an answer using the OpenAI API.
         stream = client.chat.completions.create(
-            model="gpt-5-mini",
+            model=model_name,
             messages=messages,
             stream=True,
         )
