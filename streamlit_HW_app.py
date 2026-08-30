@@ -106,7 +106,7 @@ else:
 
 
         # Select the model being tested.
-        model_name = "gpt-5-nano"
+        model_name = "gpt-3.5-turbo"
         # Show which model is being used.
         st.info(f"Model being tested: {model_name}")
 
