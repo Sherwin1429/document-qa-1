@@ -1,3 +1,6 @@
 streamlit
 openai
+requests
+beautifulsoup4
+google-genai
 PyMuPDF
